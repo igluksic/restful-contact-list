@@ -41,7 +41,7 @@ class BaseApiCalls
             return json_decode($response, true);
 
         } catch (GuzzleException $e) {
-            return 'Error occured!!! '  . $e->getTraceAsString();
+            return $e->getMessage(); //TODO: pretify message to user
         }
     }
 

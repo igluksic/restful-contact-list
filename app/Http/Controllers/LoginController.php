@@ -43,6 +43,9 @@ class LoginController extends Controller
 
         if (isset($loginUserData['token'])) {
             session(['token' => $loginUserData['token']]);
+        } else {
+            // Yes, message is crude, but effective, could use prettyifying
+            return view('loginpage')->with('message', $loginUserData);
         }
 
         return redirect(route('homepage'));

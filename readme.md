@@ -43,6 +43,9 @@ use DB;
 DB::table('users')->insert(['name' => 'Yourname', 'email'=> 'enter@email.here', 'password'=> app('hash')->make('enter.password')]);
 ```
 
+Also note that you have to be able to resolve hostname for rest service to work.
+If not done via DNS - use local hosts file (usually located at /etc/hosts)
+
 ##POWERED BY: 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
