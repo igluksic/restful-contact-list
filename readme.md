@@ -19,11 +19,14 @@ Set up your config (DB, etc...):
 ```$xslt
 cp .env.example .env
 ```
+Only DB access is mandatory
 
+Aterwards we install dependencies, migrate the database and seed it
 ```$xslt
 composer install
 php artisan migrate
 php artisan db:seed
+php artisan key:generate
 ```
 
 One user is readily available from initial seed:
