@@ -7,13 +7,6 @@ Route::post('auth/login', [
     'uses' => 'AuthController@auth'
 ]);
 
-Route::post('/test', [
-    'as' => 'test',
-    'uses' => 'HomeController@test'
-]);
-
-
-
 Route::group(['middleware' => 'jwt.auth'], function() {
     Route::get('/contacts', [
         'as' => 'contact.list',
